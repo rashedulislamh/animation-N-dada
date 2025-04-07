@@ -7,7 +7,23 @@
     width: 100vw;
     display: grid;
     place-content: center;
- }
+    animation: bodyColorChange 8s linear infinite;
+    -webkit-animation: bodyColorChange 8s linear infinite;
+}
+
+
+@keyframes bodyColorChange {
+    0%{
+        background-color: aliceblue;
+    }
+    50%{
+        background-color: rgb(226, 0, 0);
+
+    }
+    100%{
+        background-color: yellow;
+    }
+}
  .universe{
     width: 40vh;
     aspect-ratio: 1;
@@ -43,7 +59,7 @@
     }
 }
  .sun{
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     width: 18vh;
     position: relative;
     overflow: hidden;
@@ -61,6 +77,7 @@
         position: absolute;
         aspect-ratio: 1;
         background-color: green;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         border-radius: inherit;
         animation: moonWalk 8s ease-in-out;
         -webkit-animation: moonWalk 8s ease-in-out infinite;
@@ -78,10 +95,12 @@
     0%{
         translate: 100%;
         scale:1;
+        background-color: yellow;
     }
 50% {
     translate: 0%;
     scale: 0.9;
+    background-color: green;
     -webkit-transition: 100%;
     -moz-transition: 100%;
     -ms-transition: 100%;
@@ -90,5 +109,6 @@
 100%{
     translate: -100%;
     scale: 1;
+    background-color: yellow;
 }
 }
