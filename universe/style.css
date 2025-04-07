@@ -17,6 +17,11 @@
     justify-content: center;
     animation: skychange 8s linear;
     -webkit-animation: skychange 8s linear;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 @keyframes skychange {
