@@ -1,0 +1,58 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.Loader{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.animationLoader{
+    display: grid;
+    place-items:center;
+    height: 50vh;
+    width: 50vh;
+    border-radius: 1rem;
+    background-color: white;
+    border: .2rem  solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.rotate--Loader{
+    width: 7rem;
+    aspect-ratio: 1;
+    border-radius:50% ;
+    background-color: rebeccapurple;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    position: relative;
+    animation: Rotate 2s linear infinite;
+    -webkit-animation: Rotate 2s linear infinite;
+}
+
+@keyframes Rotate {
+    
+    100%{
+        rotate: 360deg;
+    }
+}
+.rotate--Loader::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6.7rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

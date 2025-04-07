@@ -1,0 +1,106 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 80vh;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+.container h1 {
+    color: rebeccapurple;
+    text-transform: capitalize;
+}
+.cradle{
+    width: 50rem;
+    height: 3rem;
+    background-color: transparent;
+    border-top: 1rem;
+    border-radius: 05rem;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+
+}
+
+/* div:nth-child(2){
+    background-color: red;
+} */
+
+
+div{
+   width: 0.5rem;
+   height: 20rem;
+   background-color: rebeccapurple;
+   position: relative;
+}
+
+.cradle div::before{
+    content: "";
+    position: absolute;
+    left: -2.25rem;
+    top: 90%;
+    /* bottom: 0; */
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+
+}
+
+
+.cradle div:first-child{
+    animation: leftSwing 2s linear infinite ;
+    transform-origin: top left;
+    -webkit-animation: leftSwing 2s linear infinite ;
+}
+
+@keyframes leftSwing {
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: 30deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 0deg;
+    }
+    
+}
+.cradle div:last-child{
+    animation: rightSwing 2s linear 1s infinite ;
+    transform-origin: top right;
+
+}
+ @keyframes rightSwing {
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: -30deg;
+    }
+    50%{
+        rotate: 0deg;
+     
+    }
+    100%{
+        rotate: 0deg;
+    }
+
+ }
+
