@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     animation: skychange 8s linear;
-    -webkit-animation: skychange 8s linear;
+    -webkit-animation: skychange 8s linear infinite;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -61,13 +61,13 @@
         position: absolute;
         aspect-ratio: 1;
         background-color: green;
-        border-radius:inherit ;
-        -webkit-border-radius:inherit ;
-        -moz-border-radius:inherit ;
-        -ms-border-radius:inherit ;
-        -o-border-radius:inherit ;
+        border-radius: inherit;
         animation: moonWalk 8s ease-in-out;
         -webkit-animation: moonWalk 8s ease-in-out infinite;
+        -webkit-border-radius: inherit;
+        -moz-border-radius: inherit;
+        -ms-border-radius: inherit;
+        -o-border-radius: inherit;
 }
 
 
