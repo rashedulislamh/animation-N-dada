@@ -1,0 +1,89 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+ body{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+ }
+ .universe{
+    width: 40vh;
+    aspect-ratio: 1;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: skychange 8s linear;
+    -webkit-animation: skychange 8s linear;
+}
+
+@keyframes skychange {
+    0%{
+        background-color: rebeccapurple;
+    }
+    25%{
+        background-color: rgb(45, 10, 80);
+    }
+    50%{
+        background-color: green;
+    }
+    75%{
+        background-color: rgb(45, 10, 80);
+    }
+    
+    100%{
+        background-color: rebeccapurple;
+    }
+}
+ .sun{
+    background-color: red;
+    width: 18vh;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+   
+  
+    &::after{
+        content: "";
+        width: inherit;
+        position: absolute;
+        aspect-ratio: 1;
+        background-color: green;
+        border-radius:inherit ;
+        -webkit-border-radius:inherit ;
+        -moz-border-radius:inherit ;
+        -ms-border-radius:inherit ;
+        -o-border-radius:inherit ;
+        animation: moonWalk 8s ease-in-out;
+        -webkit-animation: moonWalk 8s ease-in-out infinite;
+}
+
+
+
+}
+
+@keyframes moonWalk {
+    0%{
+        translate: 100%;
+        scale:1;
+    }
+50% {
+    translate: 0%;
+    scale: 0.9;
+    -webkit-transition: 100%;
+    -moz-transition: 100%;
+    -ms-transition: 100%;
+    -o-transition: 100%;
+}
+100%{
+    translate: -100%;
+    scale: 1;
+}
+}
